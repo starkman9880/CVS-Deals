@@ -1,0 +1,985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+	
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting" />
+<meta name="format-detection" content="telephone=no"/>
+<title>CVS</title>
+    
+    
+<!-- RESETS -->
+<style type="text/css">
+	:root {
+		color-scheme: light dark;
+		supported-color-schemes: light dark;
+		}
+	@media (prefers-color-scheme: dark ) {
+	  /* Shows Dark Mode-Only Content, Like Images */
+
+   
+  /* Custom Dark Mode Font Colors */
+
+		.btn_fontcc0000 {
+            color: #cc0000 !important;
+            border: none !important;
+            padding:12px 26px !important;
+			}
+        .btn_fontffffff {
+            color: #ffffff !important;
+            border: #000000 !important;
+			}
+
+/* Custom Dark Mode Background Color */
+
+ 
+/* Custom Dark Mode Font Colors */
+
+/* Custom Dark Mode Text Link Color */
+[data-ogsc].btn_fontcc0000 {
+            color: #cc0000 !important;
+            border: none !important;
+            padding:12px 26px !important;
+			}
+        
+
+[data-ogsc].btn_fontffffff {
+				color: #ffffff !important;
+            border: #000000 !important;
+			}
+}
+	
+    html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; box-sizing: border-box;}
+    body{ padding:0; margin:0; width:100%; margin-left:0px !important; margin-right:0px !important; }
+    table th { margin:0 !important; padding:0 !important; vertical-align:top !important; font-weight: normal !important; }
+    v\:* { behavior: url(#default#VML); display:block;}
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .ExternalClass * { line-height:100%; }
+</style>
+<!-- /RESETS -->
+
+<style type="text/css">
+@font-face {font-family:'CVSHealthSansBeta-Thin'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Thin'), local('CVSHealthSansBeta-Thin'),url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099954/ORIGINAL.woff2') format('woff2'),url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099632/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099985/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-ThinItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-ThinItalic'), local('CVSHealthSansBeta-ThinItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099956/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099631/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099986/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Light'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Light'), local('CVSHealthSansBeta-Light'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099945/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099630/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099980/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-LightItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-LightItalic'), local('CVSHealthSansBeta-LightItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099946/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099628/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099981/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Regular'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Regular'), local('CVSHealthSansBeta-Regular'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099952/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099629/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099984/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Italic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Italic'), local('CVSHealthSansBeta-Italic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099942/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099627/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099979/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Bold'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Bold'), local('CVSHealthSansBeta-Bold'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099935/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099626/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099975/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-BoldItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-BoldItalic'), local('CVSHealthSansBeta-BoldItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099936/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099625/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099976/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-MediumItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-MediumItalic'), local('CVSHealthSansBeta-MediumItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099950/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099622/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099983/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Black'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Black'), local('CVSHealthSansBeta-Black'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099938/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099623/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099977/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-Medium'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-Medium'), local('CVSHealthSansBeta-Medium'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099948/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099624/ORIGINAL.woff') format('woff'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099982/ORIGINAL.ttf') format('truetype');}
+@font-face {font-family:'CVSHealthSansBeta-BlackItalic'; font-style: normal; font-weight: 400; src: local('CVSHealthSansBeta-BlackItalic'), local('CVSHealthSansBeta-BlackItalic'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099940/ORIGINAL.woff2') format('woff2'), url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099621/ORIGINAL.woff') format('woff'),url('https://cvsadg.blob.core.windows.net/live-bc-publicdata/assets/2099978/ORIGINAL.ttf') format('truetype');}
+</style>
+
+<style type="text/css">
+   u ~ div .bold{ font-weight: bold !important; }
+</style>
+
+<style type="text/css">
+*[class].gmailfix { display:none; display:none !important; }
+table th { margin:0 !important; padding:0 !important; vertical-align:top !important; }
+body { width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }
+html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none;  }
+v:* { behavior: url(#default#VML); display: block; }
+a[href^="x-apple-data-detectors:"] { color: inherit; text-decoration: inherit; }
+.ReadMsgBody { width: 100%; }
+.ExternalClass { width: 100%; }
+.ExternalClass * { line-height: 100%; }
+.lhfix { mso-line-height-rule: exactly !important; }
+[class="x_bold"] { font-weight: bold !important; }
+u ~ div .bold{ font-weight: bold !important; }
+@-ms-viewport { width: device-width; }
+.appleLinksBlack a { text-decoration:none !important; }
+.appleLinksBlack a { color:#000000 !important; }
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+</style>
+
+<style type="text/css">
+@media yahoo { .bold { font-weight: bold !important;} }	
+</style>
+
+<style type="text/css">
+a {color: inherit; text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6, p {margin: 0px; padding: 0px; border: 0px;}
+.navigation {font-size: 12px; line-height: 16px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Headline_Max {font-size: 80px; line-height: 80px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Largest {font-size: 64px; line-height: 64px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Large {font-size: 48px; line-height: 48px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline {font-size: 40px; line-height: 44px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Small {font-size: 32px; line-height: 36px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Headline_Smallest {font-size: 24px; line-height: 28px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif;}
+.Body_copy_large {font-size: 20px; line-height: 24px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Body_copy_large_bold {font-size: 20px; line-height: 24px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Body_copy {font-size: 16px; line-height: 24px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Body_copy_bold {font-size: 16px; line-height: 24px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Legal {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Legal_bold {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Footer_copy {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Footer_link {font-size: 16px; line-height: 24px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Rescue_link {font-size: 12px; line-height: 20px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-weight: 400;}
+.Primary_Red_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 45px; background-color: #cc0000; text-align: center; color: #ffffff;}
+.Secondary_Red_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 41px; background-color: #cc0000; text-align: center; color: #ffffff;}
+.Primary_White_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 45px; background-color: #ffffff; text-align: center; color: #cc0000;}
+.Secondary_White_Button {font-size:16px; line-height:18px; font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; text-decoration: none; height: 41px; background-color: #ffffff; text-align: center; color: #cc0000;}
+.sup {font-size: 10px; line-height: 16px; font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: 400;}
+</style>
+
+<style type="text/css">
+.Headline {margin-top: -10px !important;padding-bottom: 10px !important;}
+.Headline_Large_Desktop {margin-top: -10px !important;padding-bottom: 10px !important;}
+@-moz-document url-prefix() {.Headline_coupon {margin-top: 0px !important;padding-bottom: 0px !important;}}
+@-moz-document url-prefix() {.Headline_Large_Desktop {margin-top: 0px !important;padding-bottom: 0px !important;}}
+</style>
+
+<style type="text/css">
+@media screen and (max-width: 600px){
+/*Mobile Text Styles*/
+.Headline_Max {font-size: 48px !important; line-height: 48px !important;}
+.Headline_Largest {font-size: 48px !important; line-height: 48px !important;}
+.Headline_Large {font-size: 40px !important; line-height: 44px !important;}
+.Headline {font-size: 32px !important; line-height: 36px !important;}
+.Headline_Small {font-size: 24px !important; line-height: 28px !important;}
+.Headline_Smallest {font-size: 20px !important; line-height: 24px !important;}
+
+/*General*/
+.hide, div.hide { display:none !important; }.block { display:block !important; }.show,div.show {display: block !important; width: auto !important; overflow: visible !important; float: none !important; max-height: inherit !important; line-height: inherit !important;}.aligncenter{ text-align:center !important; }.alignleft { text-align:left !important; }.alignright { text-align:right !important; }.hauto{ height:auto !important; }.width320{ width:320px !important; }.inline{ display: inline !important; }.bggray{ background-color: #F2F2F2 !important; }
+.width10{ width:10px !important; }.width20{ width:20px !important; }.width30{ width:30px !important; }.width40{ width:40px !important; }.width100{ width:100px !important; }.width110{ width:110px !important; }.width115{ width:115px !important; }.width135{ width:135px !important; }.width140{ width:140px !important; }.width145{ width:145px !important; }.width155{ width:155px !important; }.width160{ width:160px !important; }.width180{ width:180px !important; }.width194{ width:194px !important; }.width200{ width:200px !important; }.width220{ width:220px !important; }.width230{ width:230px !important; }.width234{ width:234px !important; }.width238{ width:238px !important; }.width240{ width:240px !important; }.width260{ width:260px !important; }.width280{ width:280px !important; }.width300{ width:300px !important; }.width310{ width:310px !important; }
+.hauto{ height:auto !important; }.hframebg{ height:555px !important; }.hframebox{ height:475px !important; }.hframecouponbg{ height:492px !important; }.hframecouponboxout{ height:412px !important; }.hframecouponboxin{ height:392px !important; }.hsecframebg{ height:371px !important; }.hsecframebox{ height:451px !important; }.height1{ height:1px !important; }.height2{ height:2px !important; }.height10{ height:10px !important; }.height70{ height:70px !important; }.height73{ height:73px !important; }.height100{ height:100px !important; }.height110{ height:110px !important; }.height120{ height:120px !important; }.height177{ height:177px !important; }.height190{ height:190px !important; }.height200{ height:200px !important; }.height222{ height:222px !important; }.height240{ height:240px !important; }.height371{ height:371px !important; }.height392{ height:392px !important; }.height412{ height:412px !important; }.height451{ height:451px !important; }.height455{ height:455px !important; }.height475{ height:475px !important; }.height492{ height:492px !important; }.height555{ height:555px !important; }
+.pad16{ padding-top: 15px !important; padding-bottom: 14px !important; }.lmargin5{ margin-left: 5px !important; }.rmargin5{ margin-right: 5px !important; }.font20{ font-size: 20px !important; }.font24{ font-size: 24px !important; }.font32{ font-size: 32px !important; }.font40{ font-size: 40px !important; }.font48{ font-size: 48px !important; }.lh10{ line-height: 10px !important; }.lh20{ line-height: 20px !important; }.lh24{ line-height: 24px !important; }.lh28{ line-height: 28px !important; }.lh30{ line-height: 30px !important; }.lh36{ line-height: 36px !important; }.lh40{ line-height: 40px !important; }.lh44{ line-height: 44px !important; }.lh48{ line-height: 48px !important; }
+
+}
+    
+.footersup {font-size: 10px; vertical-align: 4px; line-height: 0;}
+
+.footersup2 {font-size: 10px; vertical-align: 4px; line-height: 0;}
+</style>
+
+<!--[if (gte mso 9)|(IE)]>
+<xml>
+<o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<style type="text/css"> 
+div, td, span, a { font-family: Helvetica, Arial, sans-serif !important; mso-line-height-rule: exactly !important; }
+.lhfix{ mso-line-height-rule: exactly;}
+.bold {font-weight:bold !important;}
+</style>
+<![endif]-->
+    
+<!-- CTA --> 
+<!--[if (gte mso 9)|(IE)]>
+	<style type="text/css">
+		.btn_fontcc0000 { padding:12px 26px !important; }
+	</style>
+<![endif]-->
+
+
+
+	
+</head>
+
+<body style="width: 100%; background-color: #F2F2F2; margin: 0; padding: 0;"><table cellpadding="0" cellspacing="0" style="border: 0px; padding: 0px; margin: 0px; position: absolute; display: none; float: left">
+<tr>
+<td height="1" style="font-size: 1px; line-height: 1px; padding: 0px;">
+<img src="https://pharmacy.cvs.com/pub/as?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXHkMX%3Dw&_ei_=E-2JDDJIA21rx1wcJovCl-CdJE4JuVYoQdpJNi3KPujQ_BWootNjFA7R0djiDEMpLqzMdK9OuJYZdL7_9Qjp717lCBiWvn_UsvtTgw."></img>
+</td>
+</tr>
+</table>
+
+	<div style="display: none; max-height: 0px; overflow: hidden;">
+        ******************************
+    </div>
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+		&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+		&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+	<!-- END: HIDDEN PREHEADER -->
+<center>
+
+<!-- Container -->
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td width="100%" align="center" valign="top" bgcolor="#F2F2F2">
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320"><tr><td align="center" bgcolor="#F2F2F2">
+
+
+
+	
+	
+
+
+    
+        
+        
+        
+        
+        <!-- CRM campaigns, standard HEADER module -->
+        
+    
+<!-- HEADER - Member -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#ffffff">
+<tr>
+    <td style="height: 36px;" height="36" valign="top">
+        <table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+        <tr>
+            <td style="width: 10px; height: 36px;" height="36" aria-hidden="true"></td>
+            <td style="width: 190px;" align="left" valign="top">
+                <div style="line-height:10px;" class="lhfix">&nbsp;</div>
+                
+                <!-- LOGO -->
+                <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUAT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=7vc7ssgsf6k8atkrv6mjik9fmllk6lq37aruipb04h6n1sgqosng
+"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/logo_cvs_2019.png" height="16" alt="CVS&reg;" style="display: block; border: 0px;" /></a></div>
+                <!-- /LOGO -->
+                
+            </td>
+			
+            <td style="width: 430px;" align="right" valign="top" class="width140">
+                <div style="line-height:12px;" class="lhfix">&nbsp;</div>
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 16px; font-weight: 400;">
+                    
+		 
+        
+		                    <span class="hide">
+						
+					
+			
+			
+                    </span>
+                    
+                    <!-- My Account -->
+                    <a href="https://www.cvs.com/webcontent/components/DRStC/src/dist/?progname=extracare&mxc=053d1aace5a2e4fb12ad74538d3ae4457151892cb7b1f86f60e78dd7323e224c&WT.mc_id=EM_CRM_DYN_NXC_FW07&email_hash=13445f7b6ff6712e5153f3ad948d4f6afb3348d3575366ab36c4cfe56837bea7&email_cmpgn_id=24838
+" style="color: #000000; line-height: 16px; text-decoration: none; font-weight: bold;" class="bold">My deals &amp; rewards<img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/head_arw.png" width="10" height="10" alt="" style="display: inline; border: 0px;" /></a>
+                    <!-- /My Account -->
+                    
+                    </div>
+            </td>
+					
+            <td style="width: 10px;" aria-hidden="true"></td>
+        </tr>
+        </table>
+            
+            
+    </td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#d8d8d8"role="presentation"><tr><td height="1" style="line-height: 1px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="1" style="display: block; border: 0px;" alt="" /></td></tr></table>
+<!-- /HEADER - Member -->
+        
+        
+
+        
+<!-- END: HEADER -->
+ 
+
+    
+
+    
+    
+<!-- Banner - Text -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#CC0000">
+<tr>
+    <td style="height: 40px;" height="40" align="center" valign="middle">
+        <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #FFFFFF line-height: 24px; text-decoration: none;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDSTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mGzsCrcuUETOogf-8gVG7ahXV5NgSup4FJu-CHD1hcHK-KmVBRc_yI3_jzHlAJ5CsidU11Sh6V_VzR7cZ3pi7bVISj8nlMKzY98HC-ybO-AZruZQ7vFoyGOyBKUyVud15h61cmegKHYL6eQ5nZbHGjVxNTEvmv0NU8XYx-ENkon8Bld.&_di_=0hgdmmfrvs76ach5fahv0ai6v0jpu23snber859nro955fa55dv0" style="color: #FFFFFF line-height: 24px; text-decoration: none; font-weight: bold;"><span style="color:#FFFFFF; text-decoration: none;"><b>Plan your shopping trip with this week&rsquo;s deals. Go to weekly ad ></b></span></a></div>
+    </td>
+</tr>
+</table>
+<!-- /Banner - Text -->
+
+    
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+    
+
+    
+        
+        
+    
+    <!-- Hero - Color Image -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+<tr>
+    <td align="center" bgcolor="#B8E3EB">
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+        <tr>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+            <td style="width: 560px;" align="center" class="width240">
+                
+                
+                    
+                <!-- Headline Large Desktop -->
+                        <h3 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 48px; color: #CC0000; line-height: 48px; font-weight: bold;" class="bold hide lhfix headline-max">40% off</h3>
+
+                <!-- /Headline Large Desktop -->
+                
+                <!-- Headline Large Mobile -->
+                <!--[if !mso]><!-->
+                <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+                    <h3 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 40px; color: #CC0000; line-height: 44px; font-weight: bold;" class="bold lhfix">40% off</h3>
+
+                </div>
+                <!--<![endif]-->
+                <!-- /Headline Large Mobile -->
+                <!-- Headline Smallest -->
+                <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 24px; color: #CC0000; line-height: 28px; font-weight: bold;" class="bold font20 lh24 lhfix"><span style="color:#000000">one full-price item*</span></div>
+                <!-- /Headline Smallest -->
+            </td>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+        </tr>
+        </table>
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        
+        <!-- Image -->
+        <div class="hide"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDSWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mEteHoPmMcbFKwfGeRp6SMfVcYWuJRzOvr-AFhe_QHbOrQbht5qLVCqxZl8FjxzxQRcGPskcoH5EKKWXXVcfqssN2_o84R0CDMYfdMBL40Z0hC86w9WLqcmLRmjsPr9mEkgqrJU2JD3dT7R1fsS02BfDTARP1hPAGSZLW1_rMoEnoesiwHlOnRYEPaPwU8ob9d0Kn3C4Oi3O8NJao0sjnZkMFOlMKn6eryLAdDo0jJn2VVv2PWsfM42wdgzTgrA6l_8Ad2nzveN8GY83OplzdJXfj9cv6eWqvw_EcvoQCG4SCB7zDSCXzeMCoAM_iMZ2k8EsPxmfluSpLFWn8ifqjy67dFHhhcBdI297Zj4LsnjjFoVgkAEPW0wbU7miV5d7zkcIX38n_JhxI1CL-kORg6cuCYBGOnLrI3blV-smlVVka1tT4A.&_di_=kta218atpabuqu3cke5krad30k05vniqhcbs9ivlii5li9bp7nu0"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/crm/crm_images/B_390-1_pixel_005_dt.jpg" width="600" alt="" style="display:block; height:auto; border:0px;" /></a></div>
+        <!-- /Image -->
+        
+        <!-- Image Mobile -->
+        <!--[if !mso]><!-->
+        <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+        <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDSWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mEteHoPmMcbFKwfGeRp6SMfVcYWuJRzOvr-AFhe_QHbOrQbht5qLVCqxZl8FjxzxQRcGPskcoH5EKKWXXVcfqssN2_o84R0CDMYfdMBL40Z0hC86w9WLqcmLRmjsPr9mEkgqrJU2JD3dT7R1fsS02BfDTARP1hPAGSZLW1_rMoEnoesiwHlOnRYEPaPwU8ob9d0Kn3C4Oi3O8NJao0sjnZkMFOlMKn6eryLAdDo0jJn2VVv2PWsfM42wdgzTgrA6l_8Ad2nzveN8GY83OplzdJXfj9cv6eWqvw_EcvoQCG4SCB7zDSCXzeMCoAM_iMZ2k8EsPxmfluSpLFWn8ifqjy67dFHhhcBdI297Zj4LsnjjFoVgkAEPW0wbU7miV5d7zkcIX38n_JhxI1CL-kORg6cuCYBGOnLrI3blV-smlVVka1tT4A.&_di_=kta218atpabuqu3cke5krad30k05vniqhcbs9ivlii5li9bp7nu0" class="show" style="display:none;"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/crm/crm_images/B_390-1_pixel_005_mob.jpg" width="300" alt="" style="display:block; height:auto; border:0px;" /></a></div>
+        </div>
+        <!--<![endif]-->
+        <!-- /Image Mobile -->
+        
+    </td>
+</tr>
+</table>
+
+<!-- Non-Coupon -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320">
+<tr>
+    <td style="width: 20px;" class="width10" valign="top" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 80px;" height="80" class="width10" bgcolor="#B8E3EB"></td></tr></table>
+    </td>
+    <td style="width: 600px;" class="width300" align="center" valign="top" bgcolor="#ffffff">
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 600px;" class="width300">
+        <tr>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+            <td style="width: 520px;" align="center" class="width240">
+                
+                    
+                    <!--Primary Red Button - Border Style Button with Table Assist-->
+                    <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tbody><tr>
+                    <td align="center" valign="middle" width="200" height="45" bgcolor="#cc0000">
+                    <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDSAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mEteHoPmMcbFKwfGeRp6SMfVcYWuJRzOvr-AFhe_QHbOrQbht5qLVCqxZl8FjxzxQRcGPskcoH5EKKWXXVcfqssN2_o84R0CDMYfdMBL40Z0hC86w9WLqcmLRmjsPr9mEkgqrJU2JD3dT7R1fsS02BfDTARP1hPAGSZLW1_rMoEnoesiwHlOnRYEPaPwU8ob9d0Kn3C4Oi3O8NJao0sjnZkMFOlMKn6eryLAdDo0jJn2VVv2PWsfM42wdgzTgrA6l_8Ad2nzveN8GY83OplzdJXfj9cv6eWqvw_EcvoQCG4SCB7zDSCXzeMCoAM_iMZ2k8EsPxmfluSpLFWn8ifqjy67dFHhhcBdI297Zj4LsnjjFoVgkAEPW0wbU7miV5d7zkcIX38n_JhxI1CL-kORg6cuCYBGOnLrI3blV-smlVVka1tT4A.&_di_=9598vdprs2ftl5he33g9i2srlldeq0foib4fcie8eg9out4mdacg" target="_blank" style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: bold; font-size:16px; line-height: 1.2; color: #ffffff; text-decoration: none; background-color: #cc0000; border-top: 12px solid #cc0000; border-bottom: 12px solid #cc0000; border-right: 26px solid #cc0000; border-left: 26px solid #cc0000; display: inline-block;">Get coupon</a> 
+                    </td>
+                    </tr>
+                    </tbody></table>
+                    <!--Primary Red Button - Border Style Button with Table Assist-->
+                    
+                <!-- Legal -->
+                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;"><b>Redeem through Wednesday, February 22, 2023.</b></div>
+                <!-- /Legal -->
+                <div style="line-height:40px;" class="lhfix">&nbsp;</div>
+                
+            </td>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+        </tr>
+        </table>
+    </td>
+    <td style="width: 20px;" class="width10" valign="top" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 80px;" height="80" class="width10" bgcolor="#B8E3EB"></td></tr></table>
+    </td>
+</tr>
+</table>
+<!-- /Non-Coupon -->
+    
+
+    
+    
+    
+        
+        
+        
+    
+    <div class="lhfix">&nbsp;</div>
+<!-- Secondary - Image Border -->
+<table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+<tr><td align="center" bgcolor="#ffffff">
+
+    
+            
+         <table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+<tr>
+    <td>
+        
+        <!-- Image Desktop -->
+        <div class="hide"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDTAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTvES3fTMShcOYYTSLrBEsMyX95hgTMMd.&_di_=5ui6cuf9hvurdthanig5k4jerti130u8ghs6cjd3d45qi372ll9g"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/crm/crm_images/F_27202_DYN_ANCHOR2_FW07_2023_dt.jpg" width="600" alt="Three young women of color laugh with skateboards." style="display:block; height:auto; border:0px;" /></a></div>
+        <!-- /Image Desktop -->
+        
+        <!-- Image Mobile -->
+        <!--[if !mso]><!-->
+        <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+        <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDTAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTvES3fTMShcOYYTSLrBEsMyX95hgTMMd.&_di_=5ui6cuf9hvurdthanig5k4jerti130u8ghs6cjd3d45qi372ll9g"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/crm/crm_images/F_27202_DYN_ANCHOR2_FW07_2023_mob.jpg" width="300" alt="Three young women of color laugh with skateboards." style="display:block; height:auto; border:0px;" /></a></div>
+        </div>
+        <!--<![endif]-->
+        <!-- /Image Mobile -->
+        
+    </td>
+</tr>
+</table> 
+           
+        
+        <table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+        <tr>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+            <td style="width: 520px;" align="center" class="width240">
+                
+                <div style="line-height:30px;" class="lhfix">&nbsp;</div>
+                <!-- Headline Small -->
+                <h5 style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 32px; color: #000000; line-height: 36px; font-weight: bold;" class="bold font24 lh28 lhfix">Show your heart some love</h5>
+                <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                <!-- /Headline Small -->
+                    
+                <!-- Body copy -->
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;"><b>Nearly 45% of women who are 20 years or older are living with some kind of cardiovascular disease.</b><br>Heart disease is one type, and it is the leading cause of death for women in the change to U.S. Let's try to make a change together.</div>
+                <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                <!-- /Body copy -->
+                    
+                
+                        
+                <!--Red Bordered Button - Border Style Button with Table Assist-->
+                <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                <tbody><tr>
+                <td align="center" valign="middle" width="200" height="46" style="border: 2px solid #cc0000;">
+                <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDTCT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTvES3fTMShcOYYTSLrBEsMyX95hgTMMd.&_di_=26sukpv2ph5ablene2fvu1t53c2b4s99hlnmt4luiol0r8ugkkrg" target="_blank" style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-weight: bold; font-size:16px; line-height: 1.2; color: #cc0001; text-decoration: none; border-top: 12px solid #ffffff; border-bottom: 12px solid #ffffff; border-right: 26px solid #ffffff; border-left: 26px solid #ffffff; display: inline-block;" class="btn_fontcc0000">Learn how CVS supports women's health</a> 
+                </td>
+                </tr>
+                </tbody></table>
+                <!--Red Bordered Button - Border Style Button with Table Assist-->
+                        
+                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+
+                    
+            </td>
+            <td style="width: 40px;" class="width30" aria-hidden="true"></td>
+        </tr>
+        </table>
+        
+        <div style="line-height:40px;" class="lhfix">&nbsp;</div>
+    </td>
+</tr>
+</table>
+
+</td></tr>
+</table>
+<!-- /Secondary - Image Border -->
+    
+    
+    
+
+    
+    
+<!-- Footer - Global Graphic Grid -->
+
+<!-- Headline Smallest -->
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+<div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 24px; color: #000000; line-height: 28px; font-weight: bold;" class="bold font20 lh24">Shop your way</div>
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+<!-- /Headline Smallest -->
+<table cellpadding="0" cellspacing="0" style="width: 600px;" class="width300" bgcolor="#ffffff">
+<tr>
+    <td align="center">
+
+        <table cellpadding="0" cellspacing="0" style="width: 562px;" class="width300">
+        <tr>
+            <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                <!-- Grid 1 -->
+                <table align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 145px;" align="center" valign="top" class="width240">
+                        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+                        
+                        <!-- Small Graphic -->
+                        <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDURT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTlE_XE4SZM1Slj157z-wVHk2nwt8RG0.&_di_=h8jgo37gfurdaoqdp08c93g7fba9sik33tpfbhs7a93fkakrma1g"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/crm/crm_images/secondary_graphic_grid_delivery.png" height="40" width="40" alt="Order online" style="display: block; border: 0px;" /></a></div>
+                        <!-- /Small Graphic -->
+                        
+                        <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                        
+                        <!-- Body Copy Bold -->
+                        <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDURT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTlE_XE4SZM1Slj157z-wVHk2nwt8RG0.&_di_=h8jgo37gfurdaoqdp08c93g7fba9sik33tpfbhs7a93fkakrma1g" style="color: #000000; line-height: 24px; text-decoration: none;">Order online</a></div>
+                        <!-- /Body Copy Bold -->
+                        
+                        <div style="line-height:8px;" class="lhfix">&nbsp;</div>
+                        
+                        <!-- Legal -->
+                        <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDURT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTlE_XE4SZM1Slj157z-wVHk2nwt8RG0.&_di_=h8jgo37gfurdaoqdp08c93g7fba9sik33tpfbhs7a93fkakrma1g" style="color: #000000; line-height: 20px; text-decoration: none;">Choose store pickup* or enjoy FREE shipping on $35+ orders.*</a></div>
+                        <!-- /Legal -->
+                        
+                        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+                    </td>
+                </tr>
+                </table>
+                <!-- /Grid 1 -->
+
+            </th>
+            <th style="width: 2px; height: 197px; font-weight:normal;" height="197" align="center" valign="top" class="block width300 height2" aria-hidden="true">
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="height: 20px;" height="20" class="hide" aria-hidden="true"></td>
+                </tr>
+                <tr>
+                    <td style="width: 2px; height: 177px;" height="177" bgcolor="#F2F2F2" class="width260 height2" aria-hidden="true"></td>
+                </tr>
+                </table>
+            </th>
+            <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                <!-- Grid 2 -->
+                <table align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 145px;" align="center" valign="top" class="width240">
+                        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+                        
+                        <!-- Small Graphic -->
+                        <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mFeW1TlsXDJ3FcIfCeehLigAw.&_di_=jdnlcqa1rfj6itnm1281gk02q96krt0r7pm1elcchdq6e08i7vig"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/crm/crm_images/secondary_graphic_grid_app.png" height="40" width="40" alt="Download our app" style="display: block; border: 0px;" /></a></div>
+                        <!-- /Small Graphic -->
+                        
+                        <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                        
+                        <!-- Body Copy Bold -->
+                        <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mFeW1TlsXDJ3FcIfCeehLigAw.&_di_=jdnlcqa1rfj6itnm1281gk02q96krt0r7pm1elcchdq6e08i7vig" style="color: #000000; line-height: 24px; text-decoration: none;">Download our app</a></div>
+                        <!-- /Body Copy Bold -->
+                        
+                        <div style="line-height:8px;" class="lhfix">&nbsp;</div>
+                        
+                        <!-- Legal -->
+                        <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUWT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mFeW1TlsXDJ3FcIfCeehLigAw.&_di_=jdnlcqa1rfj6itnm1281gk02q96krt0r7pm1elcchdq6e08i7vig" style="color: #000000; line-height: 20px; text-decoration: none;">Access your deals, rewards and more right from your phone.</a></div>
+                        <!-- /Legal -->
+                        
+                        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+                    </td>
+                </tr>
+                </table>
+                <!-- /Grid 2 -->
+
+            </th>
+            <th style="width: 2px; height: 93px; font-weight:normal;" height="93" align="center" valign="top" class="block width300 height2" aria-hidden="true">
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="height: 20px;" height="20" class="hide" aria-hidden="true"></td>
+                </tr>
+                <tr>
+                    <td style="width: 2px; height: 177px;" height="177" bgcolor="#F2F2F2" class="width260 height2" aria-hidden="true"></td>
+                </tr>
+                </table>
+            </th>
+            <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                <!-- Grid 3 -->
+                <table align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 145px;" align="center" valign="top" class="width240">
+                        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+                        
+                        <!-- Small Graphic -->
+                        <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mG3T4JwH1eYYEY8vj9oO5KCqVwjc3R6j0.&_di_=3snnpo6l0hc9bhfhnirb7q9vfhofqu58vj1kmhca5n2i3f4ubhig"><img src="https://static.cdn.responsys.net/i2/responsysimages/cvs/contentlibrary/crm/crm_images/secondary_graphic_grid_store.png" height="40" width="40" alt="Find a store" style="display: block; border: 0px;" /></a></div>
+                        <!-- /Small Graphic -->
+                        
+                        <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                        
+                        <!-- Body Copy Bold -->
+                        <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mG3T4JwH1eYYEY8vj9oO5KCqVwjc3R6j0.&_di_=3snnpo6l0hc9bhfhnirb7q9vfhofqu58vj1kmhca5n2i3f4ubhig" style="color: #000000; line-height: 24px; text-decoration: none;">Find a store</a></div>
+                        <!-- /Body Copy Bold -->
+                        
+                        <div style="line-height:8px;" class="lhfix">&nbsp;</div>
+                        
+                        <!-- Legal -->
+                        <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-pTsNwXqrt6AICRUcSU-4ogoQzIPL416vfh9IA1MEwifZ0haostzCJ9OlQ6acp33oAb5SuaiLk2wLYrplbx26vCg9qPyLnxmfNVZfJP90eTg9u1QzmEfDPFT1joRce3mG3T4JwH1eYYEY8vj9oO5KCqVwjc3R6j0.&_di_=3snnpo6l0hc9bhfhnirb7q9vfhofqu58vj1kmhca5n2i3f4ubhig" style="color: #000000; line-height: 20px; text-decoration: none;">Search for a CVS<sup>&reg;</sup> near you.</a></div>
+                        <!-- /Legal -->
+                        
+                        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+                    </td>
+                </tr>
+                </table>
+                <!-- /Grid 3 -->
+
+            </th>
+        </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width260" role="presentation"><tr><td style="width: 560px; height: 2px; line-height: 2px;" height="2" bgcolor="#F2F2F2" class="width260"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+
+    </td>
+</tr>
+</table>
+<!-- /Footer - Global Graphic Grid -->
+    
+    
+    
+
+    
+    
+        <style type="text/css">
+    .footersup {font-size: 10px; vertical-align: 8px; line-height: 0;}
+.footersup2 {font-size: 10px; vertical-align: 4px; line-height: 0;}
+</style>
+        
+    <!-- Footer - Default -->
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#F2F2F2" role="presentation">
+<tr>
+    <td style="width: 20px;" class="width10" valign="bottom" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 190px;" height="190" class="width10" bgcolor="#cc0000" role="presentation"></td></tr></table>
+    </td>
+    <td style="width: 600px;" class="width300" align="center" valign="bottom">
+        
+                
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 600px;" align="center" valign="middle" bgcolor="#ffffff" class="width300">
+                <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width300" role="presentation">
+                <tr>
+                    <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                        <!-- Footer Link 1 -->
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 186px;" align="center" valign="middle" class="width300">
+                                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDUCT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=r8b8ff9g2ss8oqoi0b01snij287b52258devmpm2jpr82fohrkd0" style="color: #000000; line-height: 24px; text-decoration: none;">Pharmacy</a><span class="footersup">&nbsp;</span></div>
+                                <div style="line-height:40px;" class="lhfix lh24">&nbsp;</div>
+                            </td>
+                        </tr>
+                        </table>
+                        <!-- /Footer Link 1 -->
+
+                    </th>
+                    <th style="width: 1px; font-weight:normal;" align="center" valign="top" class="block width300" aria-hidden="true">
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 1px; height: 1px;" align="center" valign="top" bgcolor="#ffffff" class="width260 height2 bggray"></td>
+                        </tr>
+                        </table>
+                    </th>
+                    <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                        <!-- Footer Link 2 -->
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 186px;" align="center" valign="middle" class="width300">
+                                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDWRT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=bm96p41hg42km0sg1p0og210lcd6knok8fpcnd2b1mt21jbi0a80" style="color: #000000; line-height: 24px; text-decoration: none;">MinuteClinic<span class="footersup">&#174;</span> <br/>&amp; Telehealth</a></div>
+                                <div style="line-height:40px;" class="lhfix lh24">&nbsp;</div>
+                            </td>
+                        </tr>
+                        </table>
+                        <!-- /Footer Link 2 -->
+
+                    </th>
+                    <th style="width: 1px; font-weight:normal;" align="center" valign="top" class="block width300" aria-hidden="true">
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 1px; height: 1px;" align="center" valign="top" bgcolor="#ffffff" class="width260 height2 bggray"></td>
+                        </tr>
+                        </table>
+                    </th>
+                    <th style="width: 186px; font-weight:normal;" align="center" valign="top" class="block width300">
+
+                        <!-- Footer Link 3 -->
+                        <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 186px;" align="center" valign="middle" class="width300">
+                                <div style="line-height:24px;" class="lhfix">&nbsp;</div>
+                                <div style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px; font-weight: bold;" class="bold"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDWTT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=duq53kqhjpaku6mb29hj480r2r6mm8j966nscmr290jpql8rm780" style="color: #000000; line-height: 24px; text-decoration: none;">Shop CVS.com<span class="footersup">&#174;</span></a></div>
+                                <div style="line-height:40px;" class="lhfix lh24">&nbsp;</div>
+                            </td>
+                        </tr>
+                        </table>
+
+
+
+
+
+                        <!-- /Footer Link 3 -->
+
+                    </th>
+                </tr>
+                </table>
+            </td>
+        </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 600px; height: 110px;" height="110" align="center" valign="top" bgcolor="#cc0000" class="width300">
+                <div style="line-height:40px;" class="lhfix">&nbsp;</div>
+
+                <!-- Share links -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDWWT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=qnbhfatp5fndbdv74qc9kbrqmg5tb90j53f3u60n7fo34s5hfen0"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/share_fb.png" width="30" height="30" alt="Like us on Facebook &gt;" style="display: block; border: 0px;" /></a></td>
+                    <td style="width: 40px;" aria-hidden="true"></td>
+                    <td><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDWAT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=4pthmt8ghfivs2p9v5qhsv8ccjnh224ss4oh40127teg4o340860"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/share_tw.png" width="30" height="30" alt="Follow us on Twitter &gt;" style="display: block; border: 0px;" /></a></td>
+                    <td style="width: 40px;" aria-hidden="true"></td>
+                    <td><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDWCT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=um56ira2378hcgf6eriqgaisqal60bo5fltat1d5l3l1sdvlr6qg"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/share_yt.png" width="30" height="30" alt="Check out our YouTube channel &gt;" style="display: block; border: 0px;" /></a></td>
+                </tr>
+                </table>
+                <!-- /Share links -->
+
+            </td>
+        </tr>
+        </table>
+    </td>
+    <td style="width: 20px;" class="width10" valign="bottom" aria-hidden="true">
+        <table cellpadding="0" cellspacing="0"><tr><td style="width: 20px; height: 190px;" height="190" class="width10" bgcolor="#cc0000"></td></tr></table>
+    </td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:640px;" class="width320" bgcolor="#ffffff" role="presentation">
+<tr>
+    <td style="width: 40px;" class="width20" aria-hidden="true"></td>
+    <td style="width: 560px;" align="left" valign="top" class="width280">
+    
+        <div style="line-height:40px;" class="lhfix lh30">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation">
+        <tr>
+            <th style="width: 280px; font-weight:normal;" align="left" valign="top" class="block">
+                
+                <!-- View Online -->
+                <table cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+    <td style="width: 280px;" align="left" valign="top" class="aligncenter"><div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">Having trouble viewing this email?<br /><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDYRT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQYpiXRUa_Tv7Q9nOPtg8QDVAFIf00F5PoWfbk8OY5xX6pQvqu3_OND3R-ugHFGxz51271KSF0XTdCwoRArg-VUhCr0fO57m_JiOnUadf5FmsJDDT1mlHfHXaUKybtwZ-beIhOMdKhoipRYJWvtGLrOzpX5AQmrHWYYXWNUdTioxX_2Bw1m5HDJxzpBZMi9IUqHUNM3ltf6B1rSGlt7vz7QphZOj8cZpfNo3jhcF4WVyRxI6eKzuzitm6CaVuJm5EYS2om9hGo4W1qK3yc5FRt9JtIsgZjexWRP-W9jDkGMiNedN.&_di_=8d8tnqq99va99hq9vsk8nig83sbeki4fd4r7527ne7r0ij6dncmg" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: underline; font-weight: bold;" class="bold">View online</a></div></td>
+                </tr>
+                </table>
+                <div style="line-height:16px;" class="lhfix">&nbsp;</div>
+                <!-- /View Online -->
+                
+            </th>
+            <th style="width: 280px; font-weight:normal;" align="right" valign="top" class="block">
+                
+                <!-- Member Info -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 280px;" align="right" valign="top" class="aligncenter"><div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">ExtraCare<span class="footersup2">&#174;</span> Member: Starky<br />Card ending in:1234567890 </div></td>
+                </tr>
+                </table>
+                <div style="line-height:16px;" class="lhfix hide">&nbsp;</div>
+                <div style="line-height:8px;" class="lhfix">&nbsp;</div>
+                <!-- /Member Info -->
+
+                
+            </th>
+        </tr>
+        </table>
+        
+        <!-- Rescue Links -->
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation">
+        <tr>
+            <th style="width: 102px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 1 -->
+                <table cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+                    <td style="width: 102px; padding-top: 0px; padding-bottom: 0px;" align="left" class="width280 aligncenter pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDYTT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=1jb9ku2keo7sa6jok4k7en6e117kj2usv8nn8n2ba5psmrtr1tg0" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">Clinic Locator</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 1 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280">
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 133px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 2 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 133px; padding-top: 0px; padding-bottom: 0px;" align="center" class="width280 pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDYWT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=ntii1h7s49tiabv71tnjo2nkm7uent93kthki5jg27c74j4pius0" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">Telehealth</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 2 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280" >
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 110px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 3 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 110px; padding-top: 0px; padding-bottom: 0px;" align="center" class="width280 pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDYAT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=9t08i93uukskbjumnio2merng8c7df8a0gtiq2lklm389ub5bns0" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">Weekly ad</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 3 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280">
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 114px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 4 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 114px; padding-top: 0px; padding-bottom: 0px;" align="center" class="width280 pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDYCT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=838trdov2b7oa7qbcqp0cf43qi7295hjpck92kei3onbf2gg1g40" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">ExtraCare<span class="footersup2">&#174;</span></a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 4 -->
+                
+            </th>
+            <th style="width: 2px; font-weight:normal;" align="center" valign="top" class="block width280">
+                <div style="line-height:2px;" class="lhfix hide">&nbsp;</div>
+                <table cellpadding="0" cellspacing="0"><tr><td style="width: 2px; height: 12px; line-height: 12px;" height="12" bgcolor="#F2F2F2" class="width260 height2 lh2"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+            </th>
+            <th style="width: 93px; font-weight:normal;" align="right" valign="top" class="block width280">
+                
+                <!-- Rescue Link 5 -->
+                <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 93px; padding-top: 0px; padding-bottom: 0px;" align="right" class="width280 aligncenter pad16"><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDART&_ei_=E-N1sQsI3Uwi6JYiqq2RGQYpiXRUa_Tv7Q9nOPtg8QDVAFIf00F5PoWfbk8OY5xX6pQvqu3_OND3R-ugHFGxz51271KSF0XTdCwoRArg-VUhCr0fO57m_JiOnUadf5FmsJDDT1mlHfHXaUKybtwZ-beIhOMdKhoipRYJWvtGLrOzpX5AQmrHWYYXWNUdTioxX_2Bw1m5HDJxzpBZMi9IUqHUNM3ltf6B1rSGlt7vz7QphZOj8cZpfNo3jhcF4WVyRxI6eKzuzitm6CaVuJm5EYS2om9hGo4W1qK3yc5FRt9JtIsgZjexWRP-W9jDkGMiNedN.&_di_=hd844gmpqbug4aon712tof3gf02bnpgfndvru98gqvr9osdqsr20" style="font-family: 'CVSHealthSansBeta-Bold', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; text-decoration: none; font-weight: bold;" class="bold">My account</a></td>
+                </tr>
+                </table>
+                <!-- /Rescue Link 5 -->
+                
+            </th>
+        </tr>
+        </table>
+        <!-- /Rescue Links -->
+        
+        <div style="line-height:27px;" class="lhfix hide">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation"><tr><td style="width: 560px; height: 2px; line-height: 2px;" height="2" bgcolor="#F2F2F2" class="width280"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+        <div style="line-height:29px;" class="lhfix">&nbsp;</div>
+        
+        <!-- Legal/Disclaimer -->
+        <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">
+            
+            <!-- FROM ADDERSS LINE -->
+            Add <a class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: none;" href="mailto:extracare@pharmacy.cvs.com"><span style="text-decoration: underline;">extracare@pharmacy.cvs.com</span></a> to your address book to continue receiving our&nbsp;emails.<br /><br />
+            <!-- /FROM ADDERSS LINE -->
+            
+            
+            
+            
+            
+                    
+            
+            View our <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDATT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=fbnine3b8bd711q89mbtevvhj9qtcuec50fkn708vh4bh8plib7g" style="color: #000000; line-height: 20px; text-decoration: underline;">Privacy Policy</a>. For ExtraCare<span class="sup">&reg;</span> members, view the <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDAWT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=nr7hv02qgqkc6m7tsnsi6l6v82vv07art66n9h0gjm60dni2r4j0" style="color: #000000; line-height: 20px; text-decoration: underline;">ExtraCare Program Terms & Conditions</a>. <br/><br/>
+            
+            
+            
+            
+            
+            You are receiving this email because you indicated you wanted email communications from CVS Pharmacy<span class="footersup2">&#174;</span>. If you no longer wish to receive future emails from us, you can <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDAAT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQYpiXRUa_Tv7Q9nOPtg8QDVAFIf00F5PoWfbk8OY5xX6pQvqu3_OND3R-ugHFGxz51271KSF0XTdCwoRArg-VUhCr0fO57m_JiOnUadf5FmsJDDT1mlHfHXaUKybtwZ-beIhOMdKhoipRYJWvtGLrOzpX5AQmrHWYYXWNUdTioxX_2Bw1m5HDJxzpBZMi9IUqHUNM3ltf6B1rSGlt7vz7QphZOj8cZpfNo3jhcF4WVyRxI6eKzuzitm6CaVuJm5EYS2om9hGo4W1qK3yc5FRt9JtIsgZjexWRP-W9jDkGMiNedN.&_di_=u0iiclvberkdk3etoof54m9l6ift1et4fb2tarorhp4cd4ps0si0" style="color: #000000; line-height: 20px; text-decoration: underline;">unsubscribe</a> or <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDACT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQYpiXRUa_Tv7Q9nOPtg8QDVAFIf00F5PoWfbk8OY5xX6pQvqu3_OND3R-ugHFGxz51271KSF0XTdCwoRArg-VUhCr0fO57m_JiOnUadf5FmsJDDT1mlHfHXaUKybtwZ-beIhOMdKhoipRYJWvtGLrOzpX5AQmrHWYYXWNUdTioxX_2Bw1m5HDJxzpBZMi9IUqHUNM3ltf6B1rSGlt7vz7QphZOj8cZpfNo3jhcF4WVyRxI6eKzuzitm6CaVuJm5EYS2om9hGo4W1qK3yc5FRt9JtIsgZjexWRP-W9jDkGMiNedN.&_di_=ic3a61li4b1s33lrc44sqi5tg0pup9fipcuk1e1m9108rrnnt0tg" style="color: #000000; line-height: 20px; text-decoration: underline;">update your email preferences</a>, call <a href="Tel: 1-800-746-7287" class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: underline;">1-800-746-7287</a> or mail us at Customer Relations, <a class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: none;">One CVS Drive, Woonsocket, RI&nbsp;02895</a>.<br /><br />
+            Please do not reply to this email. For questions unrelated to your email preferences, contact us by calling <a href="Tel: 1-800-746-7287" class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: underline;">1-800-746-7287</a> or through our <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDBRT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=2or2nq6voldtp2tp61rrsn4dge9k9v7igbkck2larf6b40q5dio0" style="color: #000000; line-height: 20px; text-decoration: underline;">Customer Service&nbsp;page</a><br /><br /Privacy Policy>
+            Have feedback? <a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDBTT&_ei_=E-N1sQsI3Uwi6JYiqq2RGQ-esvXiCn70MabWyIdI5x2n7lGG5H4RH9cy4y9Mzx402qolKB-avr7NZ3nm_ZLz-ZhCU9EmDMg5I9gHTjReEN-B0B9Tbl0lO37wvDnUvKswGYE08PE8I7_bYvNDOc15V5LK3Tu7JD4oG7TpaiAAEnlZY-F6qY-ZvShEFNywVXJ55G--pDmyCGu7iYY487b3SwAWo7W2Itn5dHGJdf0Xq3ebSK2ejXsYFihc21MQf3GS4L1KYCbxNLoUnqz8cCtklTEvFUg2ROZiCHYXu5Y_P_Z0U9iS_PKrFbJdHH7fpR7_vbSjjxRWhyQBdp4Xha0YgwcVCNWZzxgNFpRT_Qiw2wGzteDpAr8C0GokfU821DcZ0XCTfRSjz8g4LMyFSHQt880v2yNMej2VbQ-D0YRZPqjyn_giLvBzgZtJ9NU3cr-GoYPfTjAhhVImalDfl4sU1PfkFrqXaNKBPhAcr-Q2-LR_N1ELHcBAElU4Pd7xBpmKSc5gBBjzQxrTl8zaPp-rxeL-YCjJupFJQYJ_VeDF0oTIeOh8PmPE13auzZPrTlFHOZnxt7jd9455Qf8a4OSGB30iNALi0ey0Wn_-8sL-74N0HM.&_di_=1p7sumamaoaubtrbafbuh1i3vu6tjt7jnkad52ka2meq0gks3vm0" style="color: #000000; line-height: 20px; text-decoration: underline;">Rate this email</a>.<br /><br />
+        </div>
+        
+        <!-- FOOTER LOGO -->
+        <div><a href="https://pharmacy.cvs.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlTQG0zeLA98bkqoLzd0klaUzazdbXzedkDfzdgLUvfmbmJozazda1zeNE48FJTGqGWuMBOjCzfPzcrkizdvLOVXtpKX%3DWSWSDBWT&_ei_=EUj_MPCv2R3gzRSE9HzZySUJtDup1hno7RZ8fg2o-Y34-Yxs8HEnKXfph68mSXN-SgjpmuP8nrpVNLJ3Xk3XWgD0Fuyim6ebgcSyuCyDgd_AkI7bYpAT3vsfuX1VIc0hQbrgT-ZOmVD9W9n6wbmTFx7g8p4mjij2qavqRaYHo0B9676ZSdjdXopFPCqiNPkSggLz82oZlelUXx6bAEpZqIQGI1bqoQK5AiDr4eJV5UWSGnsgQtyIEork1pflLAhwvMqYyhKHnz79f-5f_VKwVQ6Ys4OKXBEqJ7gBSympPBJysZAN3Y3VmWo9VPEpAgaihjqZl2C1kG5tx-qDsoqWRqO2cY1V1nHvL8ftL84wCSjRa4Ntb2C_POE6szB8nSK6yidV40mP3HVLt5RHysf-f2BhxTdNz6MQ7kfw2PiFDDCdLx4Hs1BASYuVg5KBBSTOdPwyR1yYrtZt3nAwMfG5t9bV9tU4-2A.&_di_=47kd4pl27o2m4vbmtlhhsgkdukon3bk78t42p9dmpnlsua6dvc70"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/CVS_Pharmacy_footer_logo.png" alt="CVS pharmacy&reg;" width="230" height="30" style="display: block; border: 0px;" /></a></div>
+        <!-- /FOOTER LOGO -->
+            
+        <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 12px; color: #000000; line-height: 20px; font-weight: 400;">      
+            <div style="line-height:10px;" class="lhfix">&nbsp;</div>
+            &copy; 2023 CVS Pharmacy, Inc.<br />
+            <a class="appleLinksBlack" style="color: #000000; line-height: 20px; text-decoration: none;">One CVS Drive, Woonsocket, RI 02895</a>
+        </div>
+        <!-- /Legal/Disclaimer -->
+        
+        <div style="line-height:40px;" class="lhfix">&nbsp;</div>
+    </td>
+    <td style="width: 40px;" class="width20" aria-hidden="true"></td>
+</tr>
+</table>
+<!-- /Footer - Default -->
+        
+    
+    
+    
+
+    
+    
+<!-- Disclaimer -->
+
+<div style="line-height:27px;" class="lhfix hide">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" style="width: 560px;" class="width280" role="presentation"><tr><td style="width: 560px; height: 2px; line-height: 2px;" height="2" bgcolor="#F2F2F2" class="width280"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/cvs/sp.png" width="1" height="2" style="display: block; border: 0px;" alt=""/></td></tr></table>
+        
+        <!-- Legal/Disclaimer -->
+        <table cellpadding="0" cellspacing="0" style="width:600px;" class="width300">
+<tr>
+    <th style="width: 420px; font-weight: normal;" align="center" valign="top" class="block width300">
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 600px;" align="left" class="aligncenter width300">
+                <!-- Body copy -->
+                <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;" class="hide">
+*FOR COUPON AND REWARDS OFFERS: Percent-off offers exclude sale items and have up to a $99 value. For these and all other offers, click the offer for full details. Offer valid once only and exclusively for the ExtraCare<sup>&reg;</sup> account associated with this email address. Restrictions apply.<br /><br />
+
+
+
+*FOR ORDER PICKUP: <a href='https://www.cvs.com/content/store-pickup'><b>Get details about order pickup</b></a>.<br /><br />
+*FOR FREE SHIPPING: <a href='https://www.cvs.com/help/help_subtopic_details.jsp?subtopicName=Shipping+Information&topicid=300004'><b>Learn more about 1 to 4 day shipping.</b></a><br /><br />
+
+
+
+
+                </div>
+                
+                <!-- disclaimer Mobile -->
+        <!--[if !mso]><!-->
+        <div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+            <div style="font-family: 'CVSHealthSansBeta-Regular', Helvetica, Arial, Sans Serif; font-size: 16px; color: #000000; line-height: 24px;">
+                
+        <div style="line-height:29px;" class="lhfix">&nbsp;</div>
+            *FOR COUPON AND REWARDS OFFERS: Percent-off offers exclude sale items and have up to a $99 value. For these and all other offers, click the offer for full details. Offer valid once only and exclusively for the ExtraCare<sup>&reg;</sup> account associated with this email address. Restrictions apply.<br /><br />                                                *FOR ORDER PICKUP: <a href='https://www.cvs.com/content/store-pickup'><b>Get details about order pickup</b></a>.<br /><br />            *FOR FREE SHIPPING: <a href='https://www.cvs.com/help/help_subtopic_details.jsp?subtopicName=Shipping+Information&topicid=300004'><b>Learn more about 1 to 4 day shipping.</b></a><br /><br />                                                        </div>
+            
+        </div>
+        <!--<![endif]-->
+        <!-- /disclaimer Mobile -->
+                
+            </td>
+            
+        </tr>
+        </table>
+        
+    </th>
+</tr>
+</table>
+            
+
+
+
+
+</td></tr></table>  
+</td></tr></table>
+<!-- Container -->
+
+
+    
+
+</center>
+</body>
+</html>
+
